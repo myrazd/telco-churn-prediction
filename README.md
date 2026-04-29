@@ -7,3 +7,10 @@ Customer churn is a critical challenge in the telecom industry, directly impacti
 Using a real-world telco dataset, this project covers the full data science workflow, including data cleaning, exploratory data analysis (EDA), feature engineering, model building, and evaluation.
 
 Beyond prediction, the project focuses on identifying key drivers of churn and providing practical recommendations that can support customer retention strategies.
+
+## 🎯 Objectives
+
+- Analyze customer behavior and identify patterns related to churn  <br>
+- Build and evaluate machine learning models to predict churn  <br>
+- Identify key factors influencing customer churn  <br>
+- Provide data-driven recommendations to improve customer retention  
