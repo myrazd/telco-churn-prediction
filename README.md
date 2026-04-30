@@ -13,4 +13,13 @@ Beyond prediction, the project focuses on identifying key drivers of churn and p
 - Analyze customer behavior and identify patterns related to churn  <br>
 - Build and evaluate machine learning models to predict churn  <br>
 - Identify key factors influencing customer churn  <br>
-- Provide data-driven recommendations to improve customer retention  
+- Provide data-driven recommendations to improve customer retention
+
+## 📂 Dataset
+
+The dataset used in this project is the IBM Telco Customer Churn dataset.
+
+You can download it from:
+https://shorturl.at/bMSrL
+
+Due to licensing considerations, the dataset is not included in this repository.
