@@ -1,11 +1,13 @@
-# Ignore all files inside the data folder
-data/*
-
-# Keep the .gitkeep file so the data folder remains in the repository
-!data/.gitkeep
-
 # Ignore Jupyter Notebook checkpoint files
 .ipynb_checkpoints/
 
 # Ignore Python cache files
 __pycache__/
+
+# Ignore virtual environment folders
+venv/
+.env/
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
