@@ -2,60 +2,105 @@
 
 ## 📌 Project Overview
 
-Customer churn is a critical challenge in the telecom industry, directly impacting revenue and customer lifetime value. This project aims to predict which customers are likely to churn using machine learning and transform those predictions into actionable retention and prioritization strategies.
+Customer churn is a major challenge in the telecommunications industry, directly impacting revenue, customer lifetime value, and long-term business growth.
 
-Using a real-world telco dataset, this project covers the full data science workflow, including data cleaning, exploratory data analysis (EDA), feature engineering, model building, and evaluation.
+This project uses machine learning to predict customer churn risk and transform those predictions into actionable retention strategies through customer segmentation, risk scoring, and business-focused decision support.
 
-Beyond prediction, the project focuses on identifying key drivers of churn and providing practical recommendations that can support customer retention strategies.
+The project was developed as an end-to-end machine learning workflow covering:
+
+- data cleaning and preprocessing <br>
+- exploratory data analysis (EDA) <br>
+- feature engineering <br>
+- model training and evaluation <br>
+- explainability analysis <br>
+- customer prioritization <br>
+- retention strategy simulation <br>
+- dashboard deployment <br>
+
+The final solution includes an interactive Streamlit dashboard that allows users to generate real-time churn predictions and retention recommendations.
 
 ---
 
-## 🎯 Objectives
+## 🌐 Live Dashboard
 
-- Analyze customer behavior and identify patterns related to churn  <br>
-- Build and evaluate machine learning models to predict churn  <br>
-- Identify key factors influencing customer churn  <br>
-- Provide data-driven recommendations to improve customer retention
+Streamlit App: <br>
+https://myrazd-telco-churn.streamlit.app/
+
+---
+
+## 🎯 Project Objectives
+
+- Analyze customer behavior and identify churn-related patterns <br>
+- Build and evaluate machine learning models for churn prediction <br>
+- Identify the key drivers influencing customer churn <br>
+- Develop customer risk scoring and prioritization frameworks <br>
+- Simulate business-focused retention strategies <br>
+- Deploy an interactive machine learning dashboard <br>
+
+---
+
+## 🚀 Dashboard Features
+
+The deployed Streamlit dashboard allows users to:
+
+- Input customer information <br>
+- Predict customer churn probability <br>
+- Generate churn risk tiers <br>
+- Identify customer personas <br>
+- Receive retention recommendations <br>
+
+The dashboard was built using Streamlit and deployed through Streamlit Community Cloud.
 
 ---
 
 ## 📂 Dataset
 
-The dataset used in this project is the IBM Telco Customer Churn dataset.
+The project uses the IBM Telco Customer Churn dataset.
 
-You can download it from:
+Dataset source: <br>
 https://shorturl.at/bMSrL
 
-Due to licensing considerations, the dataset is not included in this repository.
+The dataset is not included in this repository due to licensing considerations.
 
 ---
 
 ## ⚙️ Project Workflow
 
+### Phase 1: Data Preparation and Feature Engineering
+
 - Data overview and cleaning <br>
 - Exploratory data analysis (EDA) <br>
-- Data preprocessing <br>
+- Missing value handling <br>
 - Feature selection and leakage removal <br>
-- Model building and evaluation <br>
+- Advanced feature engineering <br>
+
+### Phase 2: Machine Learning Modeling
+
+- Logistic Regression <br>
+- Decision Tree <br>
+- Random Forest <br>
+- XGBoost <br>
+- LightGBM <br>
 - Model comparison <br>
-- Feature importance analysis <br>
+- Threshold tuning <br>
+
+### Phase 3: Explainability and Business Analytics
+
+- SHAP explainability analysis <br>
+- Customer risk scoring <br>
+- Customer persona analysis <br>
 - Customer value segmentation <br>
 - ROI simulation <br>
 - Customer prioritization <br>
-- Business recommendations
+- Retention recommendations <br>
 
----
+### Phase 4: Advanced Evaluation and Deployment
 
-## 🚀 Business-Focused Project Enhancements
-
-To make the project more aligned with real-world business decision-making, several additional analyses were introduced beyond standard churn prediction:
-
-- Customer value segmentation using a customer value proxy <br>
-- Customer prioritization based on churn risk and estimated business value <br>
-- ROI simulation for targeted retention campaigns <br>
-- Recommended actions for different customer segments <br>
-
-These enhancements help transform the project from a machine learning exercise into a practical retention decision-support framework.
+- Advanced evaluation metrics and visualizations <br>
+- Hyperparameter tuning <br>
+- Cross-validation <br>
+- Streamlit dashboard development <br>
+- Deployment preparation <br>
 
 ---
 
@@ -64,37 +109,78 @@ These enhancements help transform the project from a machine learning exercise i
 - Logistic Regression <br>
 - Decision Tree <br>
 - Random Forest <br>
+- XGBoost <br>
+- LightGBM <br>
+
+---
+
+## 🧠 Advanced Machine Learning Techniques
+
+The project was extended with several advanced machine learning and business analytics techniques:
+
+- Feature engineering <br>
+- Threshold tuning <br>
+- Hyperparameter tuning <br>
+- Cross-validation <br>
+- SHAP explainability analysis <br>
+- Customer risk scoring <br>
+- Customer persona analysis <br>
+- Customer value segmentation <br>
+- ROI simulation <br>
+- Retention prioritization <br>
 
 ---
 
 ## 📈 Model Evaluation Summary
 
-Among the evaluated models, the Decision Tree model achieved the strongest recall and F1-score, making it the preferred model for identifying customers who are likely to churn.
+Multiple machine learning models were evaluated for churn prediction performance.
 
-While Logistic Regression provided a strong and interpretable baseline, the tree-based models were better at capturing more complex customer behavior patterns.
+Among the evaluated models, LightGBM delivered the strongest overall balance among precision, recall, and F1 Score while maintaining good generalization during cross-validation.
+
+Threshold tuning was also applied to improve churn detection performance by balancing customer retention coverage and targeting precision.
 
 ---
 
 ## 💡 Key Insights
 
 - Customers with shorter tenure were significantly more likely to churn. <br>
-- Fiber optic customers showed a higher churn tendency throughout the analysis. <br>
-- Customers using electronic checks demonstrated higher churn risk. <br>
-- Support-related services influenced customer retention. <br>
-- High-value customers with high churn probability were identified as the most critical retention segment. <br>
-- ROI simulation suggested that targeted retention campaigns may generate strong business value relative to intervention cost.
+- Fiber optic customers demonstrated higher churn risk. <br>
+- Electronic check payment users showed elevated churn probability. <br>
+- Support-related services were associated with improved customer retention. <br>
+- High-value customers with high churn probability represented the most critical retention segment. <br>
+- Customer personas revealed distinct churn behaviors across customer groups. <br>
+- ROI simulations suggested that targeted retention campaigns could generate substantial business value. <br>
 
 ---
 
 ## 🧠 Business Recommendations
 
 - Prioritize retention campaigns for high-value customers with high churn risk. <br>
-- Encourage customers to move toward longer-term contracts through incentives and loyalty programs. <br>
-- Improve onboarding and engagement for newer customers. <br>
+- Encourage customers to transition toward longer-term contracts through loyalty incentives. <br>
+- Improve onboarding and engagement strategies for newer customers. <br>
 - Review pricing and service quality for fiber optic customers. <br>
 - Promote support-related services to improve customer retention. <br>
-- Use lower-cost retention actions for lower-value customer segments. <br>
-- Apply customer prioritization and ROI analysis before launching retention campaigns.
+- Apply customer prioritization and ROI analysis before launching retention campaigns. <br>
+- Use churn risk tiers to allocate retention resources more efficiently. <br>
+
+---
+
+## ☁️ Deployment
+
+The final machine learning dashboard was deployed using:
+
+- Streamlit <br>
+- Streamlit Community Cloud <br>
+- GitHub <br>
+
+The deployment includes:
+
+- serialized LightGBM model <br>
+- interactive user input interface <br>
+- real-time churn prediction <br>
+- customer risk scoring <br>
+- customer persona identification <br>
+- business-focused retention recommendations <br>
 
 ---
 
@@ -105,14 +191,35 @@ While Logistic Regression provided a strong and interpretable baseline, the tree
 - NumPy <br>
 - Matplotlib <br>
 - Seaborn <br>
-- Scikit-learn
+- Scikit-learn <br>
+- XGBoost <br>
+- LightGBM <br>
+- SHAP <br>
+- Streamlit <br>
+- Joblib <br>
+
+---
+
+## 📸 Dashboard Preview
+
+### Main Dashboard
+
+_Add dashboard homepage screenshot here_
+
+### Prediction Results
+
+_Add churn prediction output screenshot here_
+
+### Risk Tier and Recommendations
+
+_Add recommendation and persona output screenshot here_
 
 ---
 
 ## ✅ Conclusion
 
-This project demonstrates an end-to-end machine learning workflow for customer churn prediction and retention strategy analysis in the telecom industry.
+This project evolved beyond a standard churn prediction workflow by combining machine learning, explainability analysis, business-focused customer analytics, and interactive deployment.
 
-In addition to building predictive models, the project also incorporates customer segmentation, prioritization, and ROI simulation to support more practical business decision-making.
+In addition to predictive modeling, the project included customer segmentation, prioritization, risk scoring, retention strategy simulation, and decision-support recommendations to deliver a more practical, business-oriented solution.
 
-Overall, the project shows how machine learning can be used not only to predict churn, but also to help businesses prioritize retention efforts based on customer risk and potential value.
+Overall, the project demonstrates how machine learning can be applied not only to predict customer churn but also to support retention strategy planning and customer-focused business decision-making through an end-to-end deployed analytics workflow.
