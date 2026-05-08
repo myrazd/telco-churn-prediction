@@ -62,9 +62,9 @@ with col1:
     senior_citizen = st.selectbox("Senior Citizen", ["No", "Yes"])
     partner = st.selectbox("Partner", ["No", "Yes"])
     dependents = st.selectbox("Dependents", ["No", "Yes"])
-    tenure_months = st.number_input("Tenure Months", min_value=0, max_value=72, value=12)
 
 with col2:
+    tenure_months = st.number_input("Tenure Months", min_value=0, max_value=72, value=12)
     monthly_charges = st.number_input("Monthly Charges (MYR)", min_value=0.0, value=70.0)
     
     # Automatically calculate total charges
