@@ -33,6 +33,11 @@ st.sidebar.write(
     """
 )
 
+# Add a short instruction box
+st.info(
+    "Enter customer details below, then click Predict Churn to estimate churn risk and receive a retention recommendation."
+)
+
 ## Load model files
 # Load saved model
 model = joblib.load(
@@ -61,8 +66,8 @@ with col1:
 
 with col2:
     monthly_charges = st.number_input("Monthly Charges (MYR)", min_value=0.0, value=70.0)
-    total_charges = st.number_input("Total Charges (MYR)", min_value=0.0, value=840.0)
-    contract = st.selectbox("Contract", ["Month-to-month", "One year", "Two year"])
+    total_charges = st.number_input("Annual Total Charges (MYR)", min_value=0.0, value=840.0)
+    contract = st.selectbox("Contract Type", ["Month-to-month", "One year", "Two year"])
     payment_method = st.selectbox(
         "Payment Method",
         [
@@ -206,6 +211,31 @@ if st.button("Predict Churn"):
     else:
         risk_tier = "Low Risk"
 
+        # Assign customer persona
+    if (
+        tenure_months <= 12
+        and monthly_charges >= 70
+    ):
+        customer_persona = "New High-Value Customer"
+
+    elif (
+        contract == "Two year"
+        and tenure_months >= 48
+    ):
+        customer_persona = "Loyal Long-Term Customer"
+
+    elif (
+        internet_service == "Fiber optic"
+        and monthly_charges >= 80
+    ):
+        customer_persona = "High Usage Digital Customer"
+
+    elif monthly_charges < 40:
+        customer_persona = "Budget-Conscious Customer"
+
+    else:
+        customer_persona = "Standard Customer"
+
     # Assign recommended action
     if risk_tier == "Critical Risk":
         recommended_action = "Offer retention incentive immediately"
@@ -217,22 +247,39 @@ if st.button("Predict Churn"):
         recommended_action = "No immediate intervention needed"
 
     st.divider()
-  
     st.subheader("Prediction Result")
 
-    st.metric(
-        label="Churn Probability",
-        value=f"{churn_probability:.1%}"
+    col_result1, col_result2, col_result3 = st.columns(3)
+
+    with col_result1:
+        st.metric(
+            label="Churn Probability",
+            value=f"{churn_probability:.1%}"
+        )
+
+    with col_result2:
+        st.metric(
+            label="Prediction",
+            value=churn_prediction
+        )
+
+    with col_result3:
+        st.metric(
+            label="Risk Tier",
+            value=risk_tier
+        )
+
+    # Display churn probability progress bar
+    st.progress(churn_probability)
+
+    st.caption(
+        "The progress bar represents the predicted churn probability."
     )
-    
-    # Churn prediction message
+
     if churn_prediction == "Yes":
         st.error("Customer is likely to churn.")
     else:
         st.success("Customer is unlikely to churn.")
-    
-    # Risk tier
-    st.info(f"Risk Tier: {risk_tier}")
-    
-    # Recommendation
+
     st.write(f"**Recommended Action:** {recommended_action}")
+    st.write(f"**Customer Persona:** {customer_persona}")
