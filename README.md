@@ -200,6 +200,23 @@ The deployment includes:
 
 ---
 
+## 🏗️ Project Architecture
+
+```mermaid
+flowchart TD
+    A[IBM Telco Customer Churn Dataset] --> B[Data Cleaning & Preprocessing]
+    B --> C[Feature Engineering]
+    C --> D[Model Training & Comparison]
+    D --> E[LightGBM Final Model]
+    E --> F[Threshold Tuning]
+    F --> G[Risk Scoring & Customer Personas]
+    G --> H[Retention Recommendation Logic]
+    H --> I[Streamlit Dashboard]
+    I --> J[Deployed App on Streamlit Community Cloud]
+```
+
+---
+
 ## 📸 Dashboard Preview
 
 ### Main Dashboard
