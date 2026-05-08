@@ -23,13 +23,16 @@ st.sidebar.header("About")
 
 st.sidebar.write(
     """
-    This Streamlit dashboard predicts customer churn risk using a trained LightGBM machine learning model.
+    This Streamlit dashboard was built as part of a telco customer churn prediction portfolio project.
 
-    The project includes:
-    - churn prediction
-    - risk scoring
-    - customer segmentation
-    - retention recommendations
+    The app uses a tuned LightGBM machine learning model to:
+
+    - predict customer churn risk
+    - generate customer risk tiers
+    - identify customer personas
+    - provide retention recommendations
+
+    The project combines machine learning, customer analytics, and business-focused decision support.
     """
 )
 
