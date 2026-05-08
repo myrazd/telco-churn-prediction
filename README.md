@@ -204,15 +204,15 @@ The deployment includes:
 
 ### Main Dashboard
 
-_Add dashboard homepage screenshot here_
+![Main Dashboard](images/dashboard_home.png)
 
 ### Prediction Results
 
-_Add churn prediction output screenshot here_
+![Prediction Results](images/prediction_results.png)
 
 ### Risk Tier and Recommendations
 
-_Add recommendation and persona output screenshot here_
+![Risk Tier and Recommendations](images/retention_recommendation.png)
 
 ---
 
