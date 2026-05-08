@@ -66,7 +66,13 @@ with col1:
 
 with col2:
     monthly_charges = st.number_input("Monthly Charges (MYR)", min_value=0.0, value=70.0)
-    total_charges = st.number_input("Annual Total Charges (MYR)", min_value=0.0, value=840.0)
+    
+    # Automatically calculate total charges
+    total_charges = tenure_months * monthly_charges
+
+    st.write(
+        f"Estimated Total Charges (MYR): RM {total_charges:,.2f}"
+    )
     contract = st.selectbox("Contract Type", ["Month-to-month", "One year", "Two year"])
     payment_method = st.selectbox(
         "Payment Method",
